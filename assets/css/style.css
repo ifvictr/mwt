@@ -1,0 +1,21 @@
+*{
+    font-family: "Arial";
+    text-align: left;
+}
+body{
+    background: #fef1b5;
+}
+a{
+    border-bottom: 1px dotted;
+    color: #0000ff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+}
+a:hover{
+    border-bottom-color: transparent;
+}
+#result{
+    background: #d1eeee;
+    border-radius: 5px;
+    padding: 8px;
+}

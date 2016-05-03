@@ -2,8 +2,8 @@
     <head>
         <title>UUID2Name | Minecraft Web Tools</title>
         <meta charset="UTF-8">
-        <link rel="icon" href="../images/favicon.png" type="image/png">
-        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="icon" href="/images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
         <?php $uuid = $_GET["uuid"]; ?>

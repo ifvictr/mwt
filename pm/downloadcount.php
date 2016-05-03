@@ -2,8 +2,8 @@
     <head>
         <title>Download Count | Minecraft Web Tools</title>
         <meta charset="UTF-8">
-        <link rel="icon" href="../images/favicon.png" type="image/png">
-        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="icon" href="/images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="/assets/css/style.css">
         <style>
             table{
                 width: 50%;

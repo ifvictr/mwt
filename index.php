@@ -11,7 +11,8 @@
         <p>
             Welcome! This place looks very plain, doesn't it? I'll add some more stuff to it soon. In the meantime, check out the 
             tools that are currently available. Everything here was hacked together in half an hour or less, so it might not be 
-            aesthetically pleasing. The source code is available on <a href="https://github.com/Viperize/MWT">GitHub</a>.
+            aesthetically pleasing. The source code is available on <a href="https://github.com/Viperize/MWT">GitHub</a>. If you
+            find a bug, or want to suggest a feature, please create an issue <a href="https://github.com/Viperize/MWT/issues">here</a>.
         </p>
         <ul>
             <li><em>pm</em>: A miscellaneous set of tools for <a href="http://pocketmine.net">PocketMine-MP</a>.
@@ -19,7 +20,6 @@
                     <li><a href="pm/downloadcount.php">downloadcount</a></li>
                     <li><a href="pm/plugininfo.php">plugininfo</a></li>
                     <li><a href="pm/userplugins.php">userplugins</a></li>
-                    <li></li>
                 </ul>
             </li>
             <li><em>utils</em>: Utilities for <a href="https://minecraft.net">Minecraft</a> in general.
@@ -28,7 +28,6 @@
                     <li><a href="utils/query.php">query</a></li>
                     <li><a href="utils/skinview.php">skinview</a></li>
                     <li><a href="utils/uuid2name.php">uuid2name</a></li>
-                    <li>More coming soon...</li>
                 </ul>
             </li>
         </ul>

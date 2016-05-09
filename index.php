@@ -2,11 +2,11 @@
     <head>
         <title>Minecraft Web Tools</title>
         <meta charset="UTF-8">
-        <link rel="icon" href="/images/favicon.png" type="image/png">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <img src="/images/icon.png">
+        <img src="images/icon.png">
         <h2>Minecraft Web Tools</h2>
         <p>
             Welcome! This place looks very plain, doesn't it? I'll add some more stuff to it soon. In the meantime, check out the 

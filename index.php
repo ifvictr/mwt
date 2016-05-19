@@ -15,19 +15,24 @@
             find a bug, or want to suggest a feature, please create an issue <a href="https://github.com/Viperize/MWT/issues">here</a>.
         </p>
         <ul>
-            <li><em>pm</em>: A miscellaneous set of tools for <a href="http://pocketmine.net">PocketMine-MP</a>.
+            <li><em>mc</em>: Tools for <a href="https://minecraft.net">Minecraft</a>.
+                <ul>
+                    <li><a href="mc/name2uuid.php">name2uuid</a></li>
+                    <li><a href="mc/query.php">query</a></li>
+                    <li><a href="mc/skinview.php">skinview</a></li>
+                    <li><a href="mc/uuid2name.php">uuid2name</a></li>
+                </ul>
+            </li>
+            <li><em>pm</em>: Tools for <a href="http://pocketmine.net">PocketMine-MP</a>.
                 <ul>
                     <li><a href="pm/downloadcount.php">downloadcount</a></li>
                     <li><a href="pm/plugininfo.php">plugininfo</a></li>
                     <li><a href="pm/userplugins.php">userplugins</a></li>
                 </ul>
             </li>
-            <li><em>utils</em>: Utilities for <a href="https://minecraft.net">Minecraft</a> in general.
+            <li><em>et</em>: Extra tools, not related to Minecraft.
                 <ul>
-                    <li><a href="utils/name2uuid.php">name2uuid</a></li>
-                    <li><a href="utils/query.php">query</a></li>
-                    <li><a href="utils/skinview.php">skinview</a></li>
-                    <li><a href="utils/uuid2name.php">uuid2name</a></li>
+                    <li><a href="et/string2hash.php">string2hash</a></li>
                 </ul>
             </li>
         </ul>

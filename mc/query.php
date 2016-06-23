@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>query | Minecraft Web Tools</title>
+        <title>query | mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -13,14 +13,14 @@
         ?>
         <form action="query.php" method="GET" id="form">
             Address: <input type="text" name="address" value="<?php echo $ip; ?>"><br>
-            Port: <input type="number" name="port" value="<?php echo $port; ?>"><br>
+            Port: <input type="number" name="port" min="1" max="65535" value="<?php echo $port; ?>"><br>
             <input type="submit" value="Query">
         </form>
         <div id="result">
             <?php
             require "../assets/php/MinecraftQuery.php";
             require "../assets/php/MinecraftQueryException.php";
-            if(isset($ip) and isset($port) and !empty($ip) and !empty($port)){
+            if(!empty($ip) and !empty($port)){
                 $query = new MinecraftQuery();
                 try{
                     $query->connect($ip, $port);
@@ -60,6 +60,5 @@
             }
             ?>
         </div>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
     </body>
 </html>

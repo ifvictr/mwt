@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>downloadcount | Minecraft Web Tools</title>
+        <title>downloadcount | mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -58,7 +58,7 @@
                 <?php foreach($info as $user => $data): ?>
                 <tr id="<?php echo "a:".urlencode($user); ?>">
                     <td><?php echo ++$rank; ?></td>
-                    <td><?php echo $user; ?></td>
+                    <td><a href="#a:<?php echo urlencode($user); ?>"><?php echo $user; ?></a></td>
                     <td><?php echo number_format($data["downloads"]); ?></td>
                     <td><?php echo round(($data["downloads"] / $grandTotal) * 100, 3)."%"; ?></td>
                     <td><?php echo number_format($data["plugins"]); ?></td>
@@ -66,6 +66,5 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
     </body>
 </html>

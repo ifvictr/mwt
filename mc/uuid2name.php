@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>uuid2name | Minecraft Web Tools</title>
+        <title>uuid2name | mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -14,7 +14,7 @@
         </form>
         <div id="result">
         <?php
-        if(isset($uuid) and !empty($uuid)){
+        if(!empty($uuid)){
             $data = json_decode(file_get_contents("https://us.mc-api.net/v3/name/$uuid"), true);
             echo "$uuid leads to <strong>".$data["name"]."</strong>. Request took <strong>".$data["took"]."ms</strong> to retrieve from ".$data["source"].".";
         }
@@ -23,6 +23,5 @@
         }
         ?>
         </div>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
     </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>string2hash | Minecraft Web Tools</title>
+        <title>string2hash | mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -19,16 +19,18 @@
         </form>
         <div id="result">
         <?php
-        try{
-            if(isset($string) and isset($algo)) {
+        if(!empty($string) and !empty($algo)){
+            try{
                 echo "<p>Hashed <strong>$string</strong>, output is: <strong>".hash($algo, $string)."</strong>.</p>";
             }
+            catch(\RuntimeException $exception){
+                echo "<p class='error'>".$exception->getMessage()."</p>";
+            }
         }
-        catch(\RuntimeException $exception){
-            echo "<p class='error'>".$exception->getMessage()."</p>";
+        else{
+            echo "<p class='error'>No input string and/or algorithm specified.</p>";
         }
         ?>
         </div>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
     </body>
 </html>

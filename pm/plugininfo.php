@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>plugininfo | Minecraft Web Tools</title>
+        <title>plugininfo | mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -14,7 +14,7 @@
         </form>
         <div id="result">
             <?php
-            if(isset($name) and !empty($name)){
+            if(!empty($name)){
                 $data = json_decode(file_get_contents("http://forums.pocketmine.net/api.php"), true);
                 $count = 0;
                 foreach($data["resources"] as $plugin){
@@ -30,6 +30,5 @@
             }
             ?>
         </div>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
     </body>
 </html>

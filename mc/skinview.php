@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>skinview | Minecraft Web Tools</title>
+        <title>skinview | mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -34,7 +34,7 @@
         </form>
         <div id="result">
             <?php
-            if(isset($name) and !empty($name)){
+            if(!empty($name)){
                 switch($type){
                     case "raw":
                         echo "<img src='https://mcapi.ca/skin/file/$name'>";
@@ -56,6 +56,5 @@
             }
             ?>
         </div>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
     </body>
 </html>

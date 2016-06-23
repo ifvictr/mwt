@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Minecraft Web Tools</title>
+        <title>mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -8,12 +8,20 @@
     <body>
         <h2><img src="/images/favicon.png"> mwt</h2>
         <p>
-            Welcome! This place looks very plain, doesn't it? I'll add some more stuff to it soon. In the meantime, check out the
-            tools that are currently available. Everything here was hacked together in half an hour or less, so it might not be
-            aesthetically pleasing. The source code is available on <a href="https://github.com/Gamecrafter/mwt">GitHub</a>. If you
-            find a bug, or want to suggest a feature, please create an issue <a href="https://github.com/Gamecrafter/mwt/issues">here</a>.
+            This site contains basic tools for <a href="https://minecraft.net">Minecraft</a> and the stuff having to do with it.
+            It is open-source on <a href="https://github.com/Gamecrafter/mwt">GitHub</a>. Feel free to report any bugs or request
+            new features on the <a href="https://github.com/Gamecrafter/mwt/issues">issue tracker</a>. This site is authored
+            by <a href="https://github.com/Gamecrafter">Gamecrafter</a>.
         </p>
         <ul>
+            <li><em>et</em>: Tools not directly related to Minecraft.
+                <ul>
+                    <li><a href="et/hostname2ip.php">hostname2ip</a></li>
+                    <li><a href="et/ip2hostname.php">ip2hostname</a></li>
+                    <li><a href="et/pwgen.php">pwgen</a></li>
+                    <li><a href="et/string2hash.php">string2hash</a></li>
+                </ul>
+            </li>
             <li><em>mc</em>: Tools for <a href="https://minecraft.net">Minecraft</a>.
                 <ul>
                     <li><a href="mc/name2uuid.php">name2uuid</a></li>
@@ -29,13 +37,6 @@
                     <li><a href="pm/userplugins.php">userplugins</a></li>
                 </ul>
             </li>
-            <li><em>et</em>: Extra tools, not related to Minecraft.
-                <ul>
-                    <li><a href="et/pwgen.php">pwgen</a></li>
-                    <li><a href="et/string2hash.php">string2hash</a></li>
-                </ul>
-            </li>
         </ul>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
     </body>
 </html>

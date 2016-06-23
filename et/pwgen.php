@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>pwgen | Minecraft Web Tools</title>
+        <title>pwgen | mwt</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -9,7 +9,7 @@
     <body>
         <h2><img src="/images/favicon.png"> et / pwgen</h2>
         <form id="form">
-            Length: <input type="number" id="length" minlength="1" maxlength="256" value="16"><br>
+            Length: <input type="number" id="length" min="1" max="256" value="16"><br>
             Options:<br>
             <input type="checkbox" id="lowercaseLetters"> Lowercase letters<br>
             <input type="checkbox" id="uppercaseLetters"> Uppercase letters<br>
@@ -18,8 +18,9 @@
             <input type="checkbox" id="spaces"> Spaces<br>
             <input type="button" id="submit" value="Generate">
         </form>
-        <div id="result"></div>
-        <p>&copy; 2016 <a href="https://gamecrafter.github.io">Gamecrafter</a></p>
+        <div id="result">
+            <p class="error">No options were selected.</p>
+        </div>
     </body>
     <script>
         $("#submit").click(function(){
@@ -41,7 +42,12 @@
             for(var i = 0; i < parseInt($("#length").val()); i++){
                 pw += options.charAt(Math.floor(Math.random() * options.length));
             }
-            $("#result").html(pw);
+            if(pw.length === 0){
+                $("#result").html("<p class='error'>Couldn't generate a password, no options were selected.</p>");
+            }
+            else{
+                $("#result").html("Password generated: <strong>"+pw+"</strong>");
+            }
         }
     </script>
 </html>

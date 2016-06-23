@@ -1,3 +1,6 @@
 User-agent: *
 Disallow: assets/
 Disallow: images/
+Disallow: et/
+Disallow: mc/
+Disallow: pm/

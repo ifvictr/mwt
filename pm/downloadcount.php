@@ -1,41 +1,18 @@
 <html>
     <head>
-        <title>Download Count | Minecraft Web Tools</title>
+        <title>downloadcount | Minecraft Web Tools</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
-        <style>
-            table{
-                width: 50%;
-            }
-            table, th, td{
-                border: 1px solid #000000;
-            }
-            p, th, td{
-                font-family: "Arial";
-                padding: 6px;
-                text-align: left;
-            }
-            h1{
-                color: #ff0000;
-                font-family: "Arial";
-                font-size: 24px;
-            }
-            th{
-                background: #ccffcc;
-            }
-            td{
-                background: #eed2ee;
-            }
-        </style>
     </head>
     <body>
+        <h2><img src="/images/favicon.png"> pm / downloadcount</h2>
         <?php
         try{
             $data = json_decode(file_get_contents("http://forums.pocketmine.net/api.php"), true);
         }
         catch(\RuntimeException $exception){
-            echo "<h1>An error occurred. Please try again later.</h1>";
+            echo "<p class='error'>An error occurred. Please try again later.</p>";
         }
         $info = [];
         $grandTotal = 0;
@@ -54,7 +31,7 @@
         arsort($info);
         $rank = 0;
         ?>
-        <p>Statistics collected on <strong><?php echo date("F j, Y H:i:s e"); ?></strong>.</p>
+        <p>Statistics collected on <strong><?php echo date("l F j, Y H:i:s e"); ?></strong>.</p>
         <table>
             <thead>
                 <th>Total authors</th>
@@ -79,7 +56,7 @@
             </thead>
             <tbody>
                 <?php foreach($info as $user => $data): ?>
-                <tr>
+                <tr id="<?php echo "a:".urlencode($user); ?>">
                     <td><?php echo ++$rank; ?></td>
                     <td><?php echo $user; ?></td>
                     <td><?php echo number_format($data["downloads"]); ?></td>

@@ -1,24 +1,25 @@
 <html>
     <head>
-        <title>UUID2Name | Minecraft Web Tools</title>
+        <title>uuid2name | Minecraft Web Tools</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
+        <h2><img src="/images/favicon.png"> mc / uuid2name</h2>
         <?php $uuid = $_GET["uuid"]; ?>
-        <form action="uuid2name.php" method="GET">
-            UUID: <input type="text" name="uuid">
+        <form action="uuid2name.php" method="GET" id="form">
+            UUID: <input type="text" name="uuid"><br>
             <input type="submit" value="Check">
         </form>
         <div id="result">
         <?php
         if(isset($uuid) and !empty($uuid)){
-            $data = json_decode(file_get_contents("https://us.mc-api.net/v3/name/".$uuid), true);
-            echo $uuid." leads to <strong>".$data["name"]."</strong>, retrieved from ".$data["source"].". Request took <strong>".$data["took"]."</strong> second(s).";
+            $data = json_decode(file_get_contents("https://us.mc-api.net/v3/name/$uuid"), true);
+            echo "$uuid leads to <strong>".$data["name"]."</strong>. Request took <strong>".$data["took"]."ms</strong> to retrieve from ".$data["source"].".";
         }
         else{
-            echo "<p style='color:#ff0000;font-weight:bold;'>No input UUID specified.</p>";
+            echo "<p class='error'>No input UUID specified.</p>";
         }
         ?>
         </div>

@@ -1,14 +1,15 @@
 <html>
     <head>
-        <title>User Plugins | Minecraft Web Tools</title>
+        <title>userplugins | Minecraft Web Tools</title>
         <meta charset="UTF-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        <?php $name = $_GET["name"]; ?>
-        <form action="userplugins.php" method="GET">
-            Username: <input type="text" name="name" value="<?php echo $name; ?>">
+        <h2><img src="/images/favicon.png"> pm / userplugins</h2>
+        <?php $name = strtolower($_GET["name"]); ?>
+        <form action="userplugins.php" method="GET" id="form">
+            Username: <input type="text" name="name" value="<?php echo $name; ?>"><br>
             <input type="submit" value="Check">
         </form>
         <div id="result">
@@ -16,16 +17,18 @@
             if(isset($name) and !empty($name)){
                 $data = json_decode(file_get_contents("http://forums.pocketmine.net/api.php"), true);
                 $count = 0;
+                echo "<ol>";
                 foreach($data["resources"] as $plugin){
-                    if(strtolower($plugin["author_username"]) === strtolower($name)){
-                        echo $plugin["title"].": ".$plugin["times_downloaded"]."<br>";
+                    if(strtolower($plugin["author_username"]) === $name){
+                        echo "<li>".$plugin["title"].": ".number_format($plugin["times_downloaded"])."</li>";
                         $count++;
                     }
                 }
-                echo "This user has a total of <strong>".$count."</strong> plugin(s).";
+                echo "</ol>";
+                echo "This user has a total of <strong>$count</strong> plugin(s).";
             }
             else{
-                echo "<p style='color:#ff0000;font-weight:bold;'>No input username specified.</p>";
+                echo "<p class='error'>No input username specified.</p>";
             }
             ?>
         </div>

@@ -1,1 +1,1 @@
-#MWT (Minecraft Web Tools)
+#mwt

@@ -1,9 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 *{
-    font-family: "Arial";
+    font-family: "Source Code Pro", "Courier New";
     text-align: left;
 }
+::selection{
+    background: #adeaea;
+}
 body{
-    background: #fef1b5;
+    background: #ffffff;
 }
 a{
     border-bottom: 1px dotted;
@@ -13,9 +17,41 @@ a{
 }
 a:hover{
     border-bottom-color: transparent;
+    color: #33a1c9;
+}
+table{
+    width: 50%;
+}
+table, th, td{
+    border: 1px solid #000000;
+}
+p, th, td{
+    padding: 6px;
+}
+h1{
+    color: #ff0000;
+    font-size: 24px;
+}
+th{
+    background: #ffe4b5;
+}
+td{
+    background: #ffe1ff;
+}
+#icon{
+    margin: 0 5px;
+}
+#form{
+    background: #c5e3bf;
+    border-radius: 5px;
+    padding: 8px;
 }
 #result{
     background: #d1eeee;
     border-radius: 5px;
     padding: 8px;
+}
+.error{
+    color: #ff0000;
+    font-weight: bold;
 }

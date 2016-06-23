@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        <h1>What?!?</h1>
-        <p>
+        <h2><img src="/images/favicon.png"> ???</h2>
+        <p class="error">
             The page you were looking for has either been moved, deleted, or never even existed in the first place. Or you don't 
             have permission to view it.
         </p>

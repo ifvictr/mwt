@@ -6,13 +6,12 @@
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        <img src="/images/icon.png">
-        <h2>Minecraft Web Tools</h2>
+        <h2><img src="/images/favicon.png"> mwt</h2>
         <p>
-            Welcome! This place looks very plain, doesn't it? I'll add some more stuff to it soon. In the meantime, check out the 
-            tools that are currently available. Everything here was hacked together in half an hour or less, so it might not be 
-            aesthetically pleasing. The source code is available on <a href="https://github.com/Viperize/MWT">GitHub</a>. If you
-            find a bug, or want to suggest a feature, please create an issue <a href="https://github.com/Viperize/MWT/issues">here</a>.
+            Welcome! This place looks very plain, doesn't it? I'll add some more stuff to it soon. In the meantime, check out the
+            tools that are currently available. Everything here was hacked together in half an hour or less, so it might not be
+            aesthetically pleasing. The source code is available on <a href="https://github.com/Gamecrafter/mwt">GitHub</a>. If you
+            find a bug, or want to suggest a feature, please create an issue <a href="https://github.com/Gamecrafter/mwt/issues">here</a>.
         </p>
         <ul>
             <li><em>mc</em>: Tools for <a href="https://minecraft.net">Minecraft</a>.
@@ -32,6 +31,7 @@
             </li>
             <li><em>et</em>: Extra tools, not related to Minecraft.
                 <ul>
+                    <li><a href="et/pwgen.php">pwgen</a></li>
                     <li><a href="et/string2hash.php">string2hash</a></li>
                 </ul>
             </li>

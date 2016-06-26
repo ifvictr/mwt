@@ -4,6 +4,7 @@ A basic set of tools for [Minecraft](https://minecraft.net) and the stuff having
 
 ###Tools
 - *et*
+  - bytescale
   - hostname2ip
   - ip2hostname
   - pwgen

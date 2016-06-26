@@ -24,9 +24,9 @@
     </body>
     <script>
         $("#submit").click(function(){
-            generate();
+            result();
         });
-        function generate(){
+        function result(){
             var optionsList = {
                 "lowercaseLetters": "abcdefghijklmnopqrstuvwxyz",
                 "uppercaseLetters": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",

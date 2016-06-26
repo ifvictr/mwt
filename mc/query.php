@@ -14,7 +14,7 @@
         <form action="query.php" method="GET" id="form">
             Address: <input type="text" name="address" value="<?php echo $ip; ?>"><br>
             Port: <input type="number" name="port" min="1" max="65535" value="<?php echo $port; ?>"><br>
-            <input type="submit" value="Query">
+            <input type="submit" value="Check">
         </form>
         <div id="result">
             <?php
@@ -26,16 +26,18 @@
                     $query->connect($ip, $port);
                     echo "<h2>Info:</h2>";
                     $info = $query->getInfo();
-                    echo "
-                        Hostname: ".$info["hostname"]."<br>
-                        Host IP: ".$info["hostip"]."<br>
-                        Host port: ".$info["hostport"]."<br>
-                        Version: ".$info["version"]."<br>
-                        Engine: ".$info["server_engine"]."<br>
-                        Gametype: ".$info["gametype"]."<br>
-                        Game ID: ".$info["game_id"]."<br>
-                        Map: ".$info["map"]."<br>
-                        Players: ".$info["numplayers"]."/".$info["maxplayers"]."<br>";
+                    echo <<<INFO
+Hostname: {$info["hostname"]}<br>
+Hostname: {$info["hostname"]}<br>
+Host IP: {$info["hostip"]}<br>
+Host port: {$info["hostport"]}<br>
+Version: {$info["version"]}<br>
+Engine: {$info["server_engine"]}<br>
+Gametype: {$info["gametype"]}<br>
+Game ID: {$info["game_id"]}<br>
+Map: {$info["map"]}<br>
+Players: {$info["numplayers"]}/{$info["maxplayers"]}<br>
+INFO;
                     $plugins = $info["plugins"];
                     sort($plugins);
                     echo "<h2>Plugins (".count($plugins)."):</h2><ul>";
@@ -56,7 +58,7 @@
                 }
             }
             else{
-                echo "<p class='error'>No input address and/or port specified.</p>";
+                echo "<p class='error'>No address and/or port specified.</p>";
             }
             ?>
         </div>

@@ -52,7 +52,7 @@
                 }
             }
             else{
-                echo "<p class='error'>No input username specified.</p>";
+                echo "<p class='error'>No username specified.</p>";
             }
             ?>
         </div>

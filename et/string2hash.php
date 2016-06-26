@@ -28,7 +28,7 @@
             }
         }
         else{
-            echo "<p class='error'>No input string and/or algorithm specified.</p>";
+            echo "<p class='error'>No string and/or algorithm specified.</p>";
         }
         ?>
         </div>

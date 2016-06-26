@@ -61,7 +61,7 @@
                     <td><a href="#a:<?php echo urlencode($user); ?>"><?php echo $user; ?></a></td>
                     <td><?php echo number_format($data["downloads"]); ?></td>
                     <td><?php echo round(($data["downloads"] / $grandTotal) * 100, 3)."%"; ?></td>
-                    <td><?php echo number_format($data["plugins"]); ?></td>
+                    <td><a href="userplugins.php?name=<?php echo urlencode($user); ?>"><?php echo number_format($data["plugins"]); ?></a></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

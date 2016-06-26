@@ -16,6 +16,7 @@
         <ul>
             <li><em>et</em>: Tools not directly related to Minecraft.
                 <ul>
+                    <li><a href="et/bytescale.php" class="disabledLink">bytescale</a></li>
                     <li><a href="et/hostname2ip.php">hostname2ip</a></li>
                     <li><a href="et/ip2hostname.php">ip2hostname</a></li>
                     <li><a href="et/pwgen.php">pwgen</a></li>
@@ -34,6 +35,7 @@
                 <ul>
                     <li><a href="pm/downloadcount.php">downloadcount</a></li>
                     <li><a href="pm/plugininfo.php">plugininfo</a></li>
+                    <li><a href="pm/pluginrank.php" class="disabledLink">pluginrank</a></li>
                     <li><a href="pm/userplugins.php">userplugins</a></li>
                 </ul>
             </li>

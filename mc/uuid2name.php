@@ -19,7 +19,7 @@
             echo "$uuid leads to <strong>".$data["name"]."</strong>. Request took <strong>".$data["took"]."ms</strong> to retrieve from ".$data["source"].".";
         }
         else{
-            echo "<p class='error'>No input UUID specified.</p>";
+            echo "<p class='error'>No UUID specified.</p>";
         }
         ?>
         </div>

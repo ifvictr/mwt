@@ -20,15 +20,15 @@
                 echo "<ol>";
                 foreach($data["resources"] as $plugin){
                     if(strtolower($plugin["author_username"]) === $name){
-                        echo "<li>".$plugin["title"].": ".number_format($plugin["times_downloaded"])."</li>";
+                        echo "<li><a href='plugininfo.php?name=".urlencode($plugin["title"])."'>".$plugin["title"]."</a>: ".number_format($plugin["times_downloaded"])."</li>";
                         $count++;
                     }
                 }
                 echo "</ol>";
-                echo "This user has a total of <strong>$count</strong> plugin(s).";
+                echo "$name has a total of <strong>$count</strong> plugin(s).";
             }
             else{
-                echo "<p class='error'>No input username specified.</p>";
+                echo "<p class='error'>No username specified.</p>";
             }
             ?>
         </div>

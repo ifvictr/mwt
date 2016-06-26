@@ -19,7 +19,7 @@
             echo $data["name"]."'s UUID is <strong>".$data["full_uuid"]."</strong>. Request took <strong>".$data["took"]."ms</strong> to retrieve from ".$data["source"].".";
         }
         else{
-            echo "<p class='error'>No input username specified.</p>";
+            echo "<p class='error'>No username specified.</p>";
         }
         ?>
         </div>

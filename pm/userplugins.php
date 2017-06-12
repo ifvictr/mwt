@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>userplugins | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
         <h2><img src="/images/favicon.png"> pm / userplugins</h2>
         <?php $name = strtolower($_GET["name"]); ?>
-        <form action="userplugins.php" method="GET" id="form">
+        <form action="userplugins.php" method="get" id="form">
             Username: <input type="text" name="name" value="<?php echo $name; ?>"><br>
             <input type="submit" value="Check">
         </form>
@@ -20,7 +21,7 @@
                 echo "<ol>";
                 foreach($data["resources"] as $plugin){
                     if(strtolower($plugin["author_username"]) === $name){
-                        echo "<li><a href='plugininfo.php?name=".urlencode($plugin["title"])."'>".$plugin["title"]."</a>: ".number_format($plugin["times_downloaded"])."</li>";
+                        echo "<li><a href='plugininfo.php?name=" . urlencode($plugin["title"]) . "'>" . $plugin["title"] . "</a>: " . number_format($plugin["times_downloaded"]) . "</li>";
                         $count++;
                     }
                 }

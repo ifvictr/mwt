@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>pwgen | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
         <script src="/assets/js/jquery.min.js"></script>
@@ -36,7 +37,7 @@
             };
             var options = "";
             for(var key in optionsList){
-                if($("#"+key).prop("checked")) options += optionsList[key];
+                if($("#" + key).prop("checked")) options += optionsList[key];
             }
             var pw = "";
             for(var i = 0; i < parseInt($("#length").val()); i++){
@@ -46,7 +47,7 @@
                 $("#result").html("<p class='error'>Couldn't generate a password, no options were selected.</p>");
             }
             else{
-                $("#result").html("Password generated: <strong>"+pw+"</strong>");
+                $("#result").html("Password generated: <strong>" + pw + "</strong>");
             }
         }
     </script>

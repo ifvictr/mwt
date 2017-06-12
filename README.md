@@ -1,8 +1,8 @@
-#mwt
-######Minecraft Web Tools
-A basic set of tools for [Minecraft](https://minecraft.net) and the stuff having to do with it. Running at https://mwt.herokuapp.com.
+# mwt
+###### Minecraft Web Tools
+A basic set of tools for [Minecraft](https://minecraft.net) and the stuff having to do with it. Running at https://mwt.ifvictr.com.
 
-###Tools
+### Tools
 - *et*
   - bytescale
   - hostname2ip
@@ -19,10 +19,10 @@ A basic set of tools for [Minecraft](https://minecraft.net) and the stuff having
   - plugininfo
   - userplugins
 
-###Usage
+### Usage
 You can deploy mwt locally by running the following:
 ```sh
-$ git clone https://github.com/Gamecrafter/mwt
+$ git clone https://github.com/ifvictr/mwt
 $ cd mwt
 $ php -S localhost:<port>
 ```

@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>skinview | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
@@ -14,7 +15,7 @@
         $view = ((int) $_GET["view"] === 2 or (int) $_GET["view"] === 3 or (int) $_GET["view"] === 360) ? (int) $_GET["view"] : 2;
         $type = (strtolower($_GET["type"]) === "png" or strtolower($_GET["type"]) === "raw") ? strtolower($_GET["type"]) : "png";
         ?>
-        <form action="skinview.php" method="GET" id="form">
+        <form action="skinview.php" method="get" id="form">
             Username: <input type="text" name="name" value="<?php echo $name; ?>"><br>
             Size: <input type="number" name="size" value="<?php echo $size; ?>"><br>
             Show accessories: <select name="ac">

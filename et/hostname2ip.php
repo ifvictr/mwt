@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>hostname2ip | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
         <h2><img src="/images/favicon.png"> et / hostname2ip</h2>
         <?php $hostname = strtolower($_GET["hostname"]); ?>
-        <form action="hostname2ip.php" method="GET" id="form">
+        <form action="hostname2ip.php" method="get" id="form">
             Hostname: <input type="text" name="hostname" value="<?php echo $hostname; ?>"><br>
             <input type="submit" value="Check"><br>
         </form>

@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>error | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>

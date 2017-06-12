@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>downloadcount | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
@@ -56,7 +57,7 @@
             </thead>
             <tbody>
                 <?php foreach($info as $user => $data): ?>
-                <tr id="<?php echo "a:".urlencode($user); ?>">
+                <tr id="<?php echo "a:" . urlencode($user); ?>">
                     <td><?php echo ++$rank; ?></td>
                     <td><a href="#a:<?php echo urlencode($user); ?>"><?php echo $user; ?></a></td>
                     <td><?php echo number_format($data["downloads"]); ?></td>

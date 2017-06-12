@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>query | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
@@ -11,7 +12,7 @@
         $ip = $_GET["address"];
         $port = $_GET["port"];
         ?>
-        <form action="query.php" method="GET" id="form">
+        <form action="query.php" method="get" id="form">
             Address: <input type="text" name="address" value="<?php echo $ip; ?>"><br>
             Port: <input type="number" name="port" min="1" max="65535" value="<?php echo $port; ?>"><br>
             <input type="submit" value="Check">
@@ -28,7 +29,6 @@
                     $info = $query->getInfo();
                     echo <<<INFO
 Hostname: {$info["hostname"]}<br>
-Hostname: {$info["hostname"]}<br>
 Host IP: {$info["hostip"]}<br>
 Host port: {$info["hostport"]}<br>
 Version: {$info["version"]}<br>
@@ -40,21 +40,21 @@ Players: {$info["numplayers"]}/{$info["maxplayers"]}<br>
 INFO;
                     $plugins = $info["plugins"];
                     sort($plugins);
-                    echo "<h2>Plugins (".count($plugins)."):</h2><ul>";
+                    echo "<h2>Plugins (" . count($plugins) . "):</h2><ul>";
                     foreach($plugins as $plugin){
                         echo "<li>$plugin</li>";
                     }
                     echo "</ul>";
                     $players = $query->getPlayers();
                     sort($players);
-                    echo "<h2>Players (".count($players)."):</h2><ul>";
+                    echo "<h2>Players (" . count($players) . "):</h2><ul>";
                     foreach($players as $player){
                         echo "<li>$player</li>";
                     }
                     echo "</ul>";
                 }
                 catch(MinecraftQueryException $exception){
-                    echo "<p class='error'>".$exception->getMessage()."</p>";
+                    echo "<p class='error'>" . $exception->getMessage() . "</p>";
                 }
             }
             else{

@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>hostname2ip | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
         <h2><img src="/images/favicon.png"> et / ip2hostname</h2>
         <?php $ip = strtolower($_GET["ip"]); ?>
-        <form action="ip2hostname.php" method="GET" id="form">
+        <form action="ip2hostname.php" method="get" id="form">
             IPv4 address: <input type="text" name="ip" value="<?php echo $ip; ?>"><br>
             <input type="submit" value="Check"><br>
         </form>

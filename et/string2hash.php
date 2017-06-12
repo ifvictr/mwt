@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>string2hash | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
@@ -11,7 +12,7 @@
         $string = $_GET["string"];
         $algo = $_GET["algo"];
         ?>
-        <form action="string2hash.php" method="GET" id="form">
+        <form action="string2hash.php" method="get" id="form">
             String: <input type="text" name="string" value="<?php echo $string; ?>"><br>
             Algorithm: <input type="text" name="algo" value="<?php echo $algo; ?>"><br>
             <input type="submit" value="Check"><br>
@@ -21,10 +22,10 @@
         <?php
         if(!empty($string) and !empty($algo)){
             try{
-                echo "<p>Hashed <strong>$string</strong>, output is: <strong>".hash($algo, $string)."</strong>.</p>";
+                echo "<p>Hashed <strong>$string</strong>, output is: <strong>" . hash($algo, $string) . "</strong>.</p>";
             }
             catch(\RuntimeException $exception){
-                echo "<p class='error'>".$exception->getMessage()."</p>";
+                echo "<p class='error'>" . $exception->getMessage() . "</p>";
             }
         }
         else{

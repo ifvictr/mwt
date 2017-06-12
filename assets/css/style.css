@@ -55,7 +55,7 @@ td{
     color: #ff0000;
     font-weight: bold;
 }
-.disabledLink{
+.disabled-link{
     color: #ff0000;
     cursor: default;
     pointer-events: none;

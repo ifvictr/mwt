@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>plugininfo | mwt</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="icon" href="/images/favicon.png" type="image/png">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
         <h2><img src="/images/favicon.png"> pm / plugininfo</h2>
         <?php $name = strtolower($_GET["name"]); ?>
-        <form action="plugininfo.php" method="GET" id="form">
+        <form action="plugininfo.php" method="get" id="form">
             Plugin: <input type="text" name="name" value="<?php echo $name; ?>"><br>
             <input type="submit" value="Check">
         </form>
@@ -20,13 +21,13 @@
                 foreach($data["resources"] as $plugin){
                     if(strtolower($plugin["title"]) === $name){
                         echo "<h2>
-                            <a href='http://forums.pocketmine.net/plugins/plugin.".$plugin["id"]."'>".$plugin["title"]."</a> by
-                            <a href='http://forums.pocketmine.net/members/member.".$plugin["author_id"]."'>".$plugin["author_username"]."</a>
+                            <a href='http://forums.pocketmine.net/plugins/plugin." . $plugin["id"]."'>" . $plugin["title"] . "</a> by
+                            <a href='http://forums.pocketmine.net/members/member." . $plugin["author_id"]."'>" . $plugin["author_username"] . "</a>
                         </h2>";
-                        echo "External url: ".(empty($plugin["external_url"]) ? "N/A" : "<a href='".$plugin["external_url"]."'>".$plugin["external_url"]."</a>")."<br>";
-                        echo "Created on: ".date("l F j, Y H:i:s e", $plugin["creation_date"])."<br>";
-                        echo "Last updated on: ".(empty($plugin["last_update"]) ? "N/A" : date("l F j, Y H:i:s e", $plugin["last_update"]))."<br>";
-                        echo "Featured on: ".(empty($plugin["feature_date"]) ? "N/A" : date("l F j, Y H:i:s e", $plugin["feature_date"]))."<br>";
+                        echo "External url: " . (empty($plugin["external_url"]) ? "N/A" : "<a href='" . $plugin["external_url"] . "'>" . $plugin["external_url"] . "</a>") . "<br>";
+                        echo "Created on: " . date("l F j, Y H:i:s e", $plugin["creation_date"]) . "<br>";
+                        echo "Last updated on: " . (empty($plugin["last_update"]) ? "N/A" : date("l F j, Y H:i:s e", $plugin["last_update"])) . "<br>";
+                        echo "Featured on: " . (empty($plugin["feature_date"]) ? "N/A" : date("l F j, Y H:i:s e", $plugin["feature_date"])) . "<br>";
                         echo <<<INFO
 Id: {$plugin["id"]}<br>
 Category: {$plugin["category_title"]}<br>
